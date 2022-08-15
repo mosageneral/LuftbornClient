@@ -1,0 +1,26 @@
+
+
+  <nav style="background-color:darkorange;"  *ngIf="Service.IsLoggedIn()" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a  style="    margin-left: 14px;" class="navbar-brand" routerLink="/">Luftborn</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Users <span class="sr-only">(current)</span></a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link" (click)="LogOut()">LogOut</a>
+        </li>
+      </ul>
+    
+    </div>
+  </nav>
+<div  style="margin: 35px;width: 100%; height:100%;"> 
+
+    <router-outlet style="width: 100%; height:100%;"></router-outlet>
+
+</div>

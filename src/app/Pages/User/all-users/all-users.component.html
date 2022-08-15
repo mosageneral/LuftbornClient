@@ -1,0 +1,29 @@
+
+<div class="table-responsive">
+  <table class="table table-hover thead-dark table-responsive ">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Image</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+</thead>
+<tbody>
+    <tr  *ngFor="let item of Users">
+      <td>{{item.fullName}}</td>
+      <td>{{item.email}}</td>
+      <td *ngIf="item.image!='NoImage'"><img [src]="item.image"></td>
+      <td><button class="btn btn-warning" routerLink="/Update/{{item.id}}">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteUser(item.id)">Delete</button></td>
+
+
+
+    </tr>
+</tbody>
+    
+  </table>
+</div>
+
+  

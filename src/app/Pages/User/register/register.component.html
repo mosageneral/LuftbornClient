@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center text-dark mt-5">Register New Luftborn User</h2>
+    
+        <div class="card my-5">
+            
+          <form  [formGroup]="RegisterForm" class="card-body cardbody-color p-lg-5" (ngSubmit)="Register()">
+
+            <div class="text-center">
+              <img src="https://www.luftborn.com/img/logo.svg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
+            </div>
+            <div class="mb-3">
+                <input type="text" formControlName="FullName" class="form-control" id="FullName" placeholder="FullName">
+              </div>
+            <div class="mb-3">
+              <input type="email" formControlName="Email" class="form-control" id="Email" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" formControlName="Password" id="password" placeholder="password">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" formControlName="ConfirmPassword" id="ConfirmPassword" placeholder="ConfirmPassword">
+              </div>
+            <div class="text-center">
+                
+                <button type="submit" class="btn btn-color px-5 mb-5 w-100">Register</button><br>
+               
+            </div>
+           
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
